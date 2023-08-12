@@ -11,6 +11,5 @@ interface ReducerContainerHost<
     STATE : State,
     SIDE_EFFECT : SideEffect,
     > : ContainerHost<STATE, SIDE_EFFECT> {
-
-    suspend fun handleIntent(intent: INTENT): Flow<Pattern>
+    suspend fun onNewIntent(intent: INTENT): Flow<Pattern>
 }
